@@ -11,8 +11,18 @@ describe('Triangle',function(){
         var notTriangle = new Triangle(3,9,22);
         expect(notTriangle.checkType()).toEqual("not a triangle");
     });
-});
-describe('Triangle', function() {
+    it('test to make sure equilateral', function(){
+        var testTri = new Triangle(3,3,3)
+        expect(testTri.checkType()).toEqual("an equilateral triangle");
+    });
+    it('test to make sure isosceles', function(){
+        var testTri = new Triangle(3,2,2)
+        expect(testTri.checkType()).toEqual("an isosceles triangle");
+    });
+    it('test to make sure scalene ', function(){
+        var testTri = new Triangle(3,2,1)
+        expect(testTri.checkType()).toEqual("a scalene triangle");
+    });
     var reusableTriangle;
     
     beforeEach(function() {
@@ -22,5 +32,8 @@ describe('Triangle', function() {
     it('should show how beforeEach() works', function() {
         console.log(reusableTriangle);
     });
-    });
+});
+
+ 
+   
 
