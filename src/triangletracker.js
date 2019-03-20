@@ -1,23 +1,20 @@
-export function Triangle(side1, side2, side3) {
-    this.side1 = side1;
-    this.side2 = side2;
-    this.side3 = side3;
+/* eslint-disable no-unused-vars */
+export class Date {
+  constructor(month, day, year) {
+    this.month = month;
+    this.day = day;
+    this.year = year;
   }
-  
-  Triangle.prototype.checkType = function() {
-    if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
-      return "not a triangle";
-  
-    }  else if ((this.side1 === this.side2) && (this.side2 === this.side3)) {
-      return "an equilateral triangle";
-  
-    } else if ((this.side1 === this.side2) || ((this.side1 === this.side3)) || ((this.side2 === this.side3))) {
-      return "an isosceles triangle";
-  
-    } else if ((this.side1 !== this.side2) && ((this.side1 !== this.side3)) && ((this.side2 !== this.side3))) {
-      return "a scalene triangle";
-    } else {
-      return "unable to compute";
-    }
-  };
-  
+  leapYear(year) {
+    if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+    console.log("true");
+    return true;
+  } else {
+    console.log("false");
+    return false;
+  }
+
+  }
+}
+
+/* eslint-disable no-unused-vars */

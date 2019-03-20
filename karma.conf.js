@@ -1,5 +1,3 @@
-const webpackConfig = require('./webpack.config.js');
-
 module.exports = function(config) {
   config.set({
     basePath: '',
@@ -30,5 +28,5 @@ module.exports = function(config) {
     browsers: ['Chrome'],
     singleRun: false,
     concurrency: Infinity
-  })
-}
+  });
+};

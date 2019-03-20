@@ -1,19 +1,21 @@
+import { Date } from "./triangletracker.js";
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
 import $ from 'jquery';
-import { Triangle } from "./triangletracker.js"
+import './styles.css';
+
 
 $(document).ready(function() {
-    $("form#triangle_tracker_form").submit(function(event) {
-      var side1 = parseInt($("input#side1").val());
-      var side2 = parseInt($("input#side2").val());
-      var side3 = parseInt($("input#side3").val());
-      var triangle = new Triangle(side1, side2, side3);
-      var result = triangle.checkType(); 
-      $("#result").text(result);
-  
-      event.preventDefault();
-    });
+  $("form#day_of_the_week").submit(function(event) {
+    event.preventDefault();
+    var year = parseInt($("input#year").val());
+    var month = parseInt($("input#month").val());
+    var day = parseInt($("input#day").val());
+    var date = new Date(month,day,year);
+    date.leapYear(year);
+    console.log(date);
+
+
+
   });
-  
+});
